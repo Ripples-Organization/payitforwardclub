@@ -17,4 +17,4 @@ jobs:
         server: ftp.payitforwardclub.org
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /home/payibgdj/
+        server-dir: /payitforwardclub.org/payibgdj/
