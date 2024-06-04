@@ -4,3 +4,10 @@
   .menu-visible {
     display: block;
   }
+
+  .contain{
+   margin: 20% 0px;
+  }
+  .spacer{
+    width: 100% !important;
+  }
