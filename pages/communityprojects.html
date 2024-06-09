@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,37 @@
     <link rel="stylesheet" href="../styles/custom.css" />
   </head>
   <body>
-    <div>
+    <div class="content-wrapper">
+      <div id="mobile-menu" class="menu-hidden sm:hidden px-4 py-3 bg-blue_pf">
+        <div>
+          <ul>
+            <li class="list-item">
+              <a
+                class="font-roboto underline visited text-white"
+                href="mailto: support@payitforwardclub.com"
+                >support@payitforwardclub.com</a
+              >
+            </li>
+            <li class="list-item">
+              <a class="font-roboto underline visited text-white" href="#"
+                >Slack</a
+              >
+            </li>
+            <li class="list-item">
+              <a class="font-roboto underline visited text-white" href="#"
+                >Donate</a
+              >
+            </li>
+            <li class="list-item">
+              <a
+                class="font-roboto font-normal underline visited text-white"
+                href="#"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
       <header
         class="flex items-center justify-between border-b border-stone-200 bg-blue_pf px-4 py-3 uppercase sm:px-6"
       >
@@ -45,7 +75,6 @@
           The Pay It Forward Club
         </a>
         <div class="hidden sm:flex items-center space-x-4">
-
           <button
             class="font-roboto font-semibold px-4 py-2 md:px-5 md:py-2.5 inline-block rounded-full bg-white text-blue_pf_primary text-lg"
           >
@@ -60,7 +89,11 @@
             Donate
           </button>
           <button id="hamburger" class="sm:hidden px-3 py-2">
-            <svg class="fill-white h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              class="fill-white h-5 w-5"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
@@ -78,41 +111,26 @@
               >
             </li>
             <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Slack</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Donate</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto font-normal underline visited text-white" href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="">
-      <div id="mobile-menu" class="menu-hidden sm:hidden px-4 py-3 bg-blue_pf">
-        <div>
-          <ul>
-            <li class="list-item">
-              <a
-                class="font-roboto underline visited text-white"
-                href="mailto: support@payitforwardclub.com"
-                >support@payitforwardclub.com</a
+              <a class="font-roboto underline visited text-white" href="#"
+                >Slack</a
               >
             </li>
             <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Slack</a>
+              <a class="font-roboto underline visited text-white" href="#"
+                >Donate</a
+              >
             </li>
             <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Donate</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto font-normal underline visited text-white" href="#">About</a>
+              <a
+                class="font-roboto font-normal underline visited text-white"
+                href="#"
+                >About</a
+              >
             </li>
           </ul>
         </div>
       </div>
+
       <main class="">
         <div class="mt-10 flex md:ml-20 gap-3">
           <p class="">.../</p>
@@ -122,29 +140,94 @@
         <section class="py-17 flex flex-col items-center justify-center">
           <div class="container mx-auto px-4">
             <div class="text-left mb-12">
-              <h2 class="text-3xl md:text-3xl mt-5 sm:text-lg font-roboto font-medium">
+              <h2
+                class="text-3xl md:text-3xl mt-5 sm:text-lg font-roboto font-medium"
+              >
                 Community Projects
               </h2>
-              <ul class="text-lg my-10 font-roboto  text-blue_pf_primary">
-                <li><a class="underline decoration-blue_pf_primary" href="">Assets for Humanity</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Real Estate for Humanity</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Cars for Humanity</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Sustainable Communities</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Dog Heaven</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Feed the Homeless</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Helpers for Society</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Basecamps for Humanity</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Community Tool Sharing</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Software for All</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Zoom for All</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Figma for All</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Existing Resources</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Existing Benefits</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Existing Nonprofits</a></li>
-                <li><a class="underline decoration-blue_pf_primary"  href="">Existing Products</a></li>
+              <ul class="text-lg my-10 font-roboto text-blue_pf_primary">
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Assets for Humanity</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Real Estate for Humanity</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Cars for Humanity</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Sustainable Communities</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Dog Heaven</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Feed the Homeless</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Helpers for Society</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Basecamps for Humanity</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Community Tool Sharing</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Software for All</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Zoom for All</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Figma for All</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Existing Resources</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Existing Benefits</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Existing Nonprofits</a
+                  >
+                </li>
+                <li>
+                  <a class="underline decoration-blue_pf_primary" href=""
+                    >Existing Products</a
+                  >
+                </li>
               </ul>
             </div>
-
           </div>
         </section>
       </main>
@@ -153,7 +236,9 @@
           <div class="container mx-auto px-4">
             <div>
               <div>
-                <h3 class="text-2xl font-medium font-roboto mb-4">Contact Us</h3>
+                <h3 class="text-2xl font-medium font-roboto mb-4">
+                  Contact Us
+                </h3>
               </div>
               <div class="container grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div>
@@ -166,12 +251,16 @@
                       >
                     </li>
                     <li class="list-item">
-                      <a class="font-roboto underline visited text-blue_pf_primary" href="#"
+                      <a
+                        class="font-roboto underline visited text-blue_pf_primary"
+                        href="#"
                         >Slack</a
                       >
                     </li>
                     <li class="list-item">
-                      <a class="font-roboto underline visited text-blue_pf_primary" href="#"
+                      <a
+                        class="font-roboto underline visited text-blue_pf_primary"
+                        href="#"
                         >Donate</a
                       >
                     </li>

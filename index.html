@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,37 @@
     <link rel="stylesheet" href="./styles/custom.css" />
   </head>
   <body>
-    <div>
+    <div class="content-wrapper">
+      <div id="mobile-menu" class="menu-hidden sm:hidden px-4 py-3 bg-blue_pf">
+        <div>
+          <ul>
+            <li class="list-item">
+              <a
+                class="font-roboto underline visited text-white"
+                href="mailto: support@payitforwardclub.com"
+                >support@payitforwardclub.com</a
+              >
+            </li>
+            <li class="list-item">
+              <a class="font-roboto underline visited text-white" href="#"
+                >Slack</a
+              >
+            </li>
+            <li class="list-item">
+              <a class="font-roboto underline visited text-white" href="#"
+                >Donate</a
+              >
+            </li>
+            <li class="list-item">
+              <a
+                class="font-roboto font-normal underline visited text-white"
+                href="#"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
       <header
         class="flex items-center justify-between border-b border-stone-200 bg-blue_pf px-4 py-3 uppercase sm:px-6"
       >
@@ -50,7 +80,9 @@
               <a class="font-roboto text-white" href="#">Slack</a>
             </li>
             <li class="list-item" style="margin-right: 10px">
-              <a class="font-roboto text-white" href="#">Donate</a>
+              <a class="font-roboto text-white" href="/pages/donate.html"
+                >Donate</a
+              >
             </li>
             <li class="list-item">
               <a class="font-roboto font-normal text-white" href="#">About</a>
@@ -70,61 +102,54 @@
             Donate
           </button>
           <button id="hamburger" class="sm:hidden px-3 py-2">
-            <svg class="fill-white h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              class="fill-white h-5 w-5"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
         </div>
       </header>
-      <div id="mobile-menu" class="menu-hidden sm:hidden px-4 py-3 bg-blue_pf">
-        <div>
-          <ul>
-            <li class="list-item">
-              <a
-                class="font-roboto underline visited text-white"
-                href="mailto: support@payitforwardclub.com"
-                >support@payitforwardclub.com</a
-              >
-            </li>
-            <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Slack</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Donate</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto font-normal underline visited text-white" href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div>
-      <div id="mobile-menu" class="menu-hidden sm:hidden px-4 py-3 bg-blue_pf">
-        <div>
-          <ul>
-            <li class="list-item">
-              <a
-                class="font-roboto underline visited text-white"
-                href="mailto: support@payitforwardclub.com"
-                >support@payitforwardclub.com</a
-              >
-            </li>
-            <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Slack</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto underline visited text-white" href="#">Donate</a>
-            </li>
-            <li class="list-item">
-              <a class="font-roboto font-normal underline visited text-white" href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <main class="">
+        <div
+          id="mobile-menu"
+          class="menu-hidden sm:hidden px-4 py-3 bg-blue_pf"
+        >
+          <div>
+            <ul>
+              <li class="list-item">
+                <a
+                  class="font-roboto underline visited text-white"
+                  href="mailto: support@payitforwardclub.com"
+                  >support@payitforwardclub.com</a
+                >
+              </li>
+              <li class="list-item">
+                <a class="font-roboto underline visited text-white" href="#"
+                  >Slack</a
+                >
+              </li>
+              <li class="list-item">
+                <a
+                  class="font-roboto underline visited text-white"
+                  href="/pages/donate.html"
+                  >Donate</a
+                >
+              </li>
+              <li class="list-item">
+                <a
+                  class="font-roboto font-normal underline visited text-white"
+                  href="#"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
         <section class="bg-blue_pf_primary text-white py-20">
           <div class="container mx-auto px-4 text-center">
             <img
@@ -133,17 +158,24 @@
               class="rounded-lg shadow-lg mx-auto w-1/3"
             />
 
-            <h1 class="text-3xl md:text-6xl font-bold mt-4 font-body">The Pay It Forward Club</h1>
+            <h1 class="text-3xl md:text-6xl font-bold mt-4 font-body">
+              The Pay It Forward Club
+            </h1>
           </div>
         </section>
 
         <section class="py-20">
           <div class="container mx-auto px-4">
             <div class="text-left mb-12">
-              <h2 class="text-2xl md:text-2xl font-roboto font-medium">Mission Statement</h2>
+              <h2 class="text-2xl md:text-2xl font-roboto font-medium">
+                Mission Statement
+              </h2>
               <div>
                 <span class="font-roboto">See</span>
-                <a href="./pages/ourstatement.html" class="mt-4 underline visited text-blue_pf_primary font-roboto">
+                <a
+                  href="./pages/ourstatement.html"
+                  class="mt-4 underline visited text-blue_pf_primary font-roboto"
+                >
                   Our Statement to the World.</a
                 >
               </div>
@@ -156,24 +188,38 @@
                 <div>
                   <ul class="list-disc">
                     <li class="list-item">
-                      <a class="underline visited text-blue_pf_primary" href="/pages/stability.html"
+                      <a
+                        class="underline visited text-blue_pf_primary"
+                        href="/pages/stability.html"
                         >Basic Stability</a
                       >
                     </li>
                     <li class="list-item">
-                      <a class="underline visited text-blue_pf_primary" href="/pages/payitforward.html">Pay It Forward</a>
+                      <a
+                        class="underline visited text-blue_pf_primary"
+                        href="/pages/payitforward.html"
+                        >Pay It Forward</a
+                      >
                     </li>
                     <li class="list-item">
-                      <a class="underline visited text-blue_pf_primary" href="/pages/communityprojects.html"
+                      <a
+                        class="underline visited text-blue_pf_primary"
+                        href="/pages/communityprojects.html"
                         >Community Projects</a
                       >
                     </li>
                   </ul>
                 </div>
                 <div class="">
-                  <h3 class="text-2xl font-medium mb-4 font-roboto">More Content</h3>
+                  <h3 class="text-2xl font-medium mb-4 font-roboto">
+                    More Content
+                  </h3>
 
-                  <a class="underline visited text-blue_pf_primary font-roboto" href="/pages/posts.html">Posts</a>
+                  <a
+                    class="underline visited text-blue_pf_primary font-roboto"
+                    href="/pages/posts.html"
+                    >Posts</a
+                  >
                 </div>
               </div>
             </div>
@@ -185,7 +231,9 @@
           <div class="container mx-auto px-4">
             <div>
               <div>
-                <h3 class="text-2xl font-medium font-roboto mb-4">Contact Us</h3>
+                <h3 class="text-2xl font-medium font-roboto mb-4">
+                  Contact Us
+                </h3>
               </div>
               <div class="container grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div>
@@ -198,12 +246,16 @@
                       >
                     </li>
                     <li class="list-item">
-                      <a class="font-roboto underline visited text-blue_pf_primary" href="#"
+                      <a
+                        class="font-roboto underline visited text-blue_pf_primary"
+                        href="#"
                         >Slack</a
                       >
                     </li>
                     <li class="list-item">
-                      <a class="font-roboto underline visited text-blue_pf_primary" href="#"
+                      <a
+                        class="font-roboto underline visited text-blue_pf_primary"
+                        href="#"
                         >Donate</a
                       >
                     </li>
