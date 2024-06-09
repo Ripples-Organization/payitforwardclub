@@ -1,5 +1,6 @@
 <?php
-include 'db_connect.php';
+include '../db_connect.php'; // Adjust the path to include the correct location
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
