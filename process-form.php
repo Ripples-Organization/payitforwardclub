@@ -1,35 +1,22 @@
 <?php
+include 'db_connect.php';
 
-$title = $_POST["title"];
-$content = $_POST["content"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $title = $conn->real_escape_string($_POST['title']);
+    $content = $conn->real_escape_string($_POST['content']);
 
- 
-$servername = "localhost";
-$dbname = "payibgdj_payitforwardclub";
-$username = "payibgdj_payibgdj";
-$pass = "Payitforward1";
-        
-$conn = mysqli_connect($servername, $username, $pass, $dbname);
-        
-if (mysqli_connect_errno()) {
-    die("Connection error: " . mysqli_connect_error());
-}           
-        
-$sql = "INSERT INTO post (title, body)
-        VALUES (?, ?)";
+    // Prepare the SQL statement
+    $sql = "INSERT INTO posts (title, content) VALUES ('$title', '$content')";
 
-$stmt = mysqli_stmt_init($conn);
+    // Execute the query
+    if ($conn->query($sql) === TRUE) {
+        echo "New post created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-if ( ! mysqli_stmt_prepare($stmt, $sql)) {
- 
-    die(mysqli_error($conn));
+    // Close the connection
+    $conn->close();
 }
-
-mysqli_stmt_bind_param($stmt, "ss",
-                       $title,
-                       $content);
-
-mysqli_stmt_execute($stmt);
-
-echo "Record saved.";
 ?>
