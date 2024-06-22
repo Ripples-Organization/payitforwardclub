@@ -84,11 +84,6 @@
               <a class="font-roboto font-normal text-white" href="#">About</a>
             </li>
           </ul>
-          <button
-            class="font-roboto font-semibold px-4 py-2 md:px-5 md:py-2.5 inline-block rounded-full bg-white text-blue_pf_primary text-lg"
-          >
-            Donate
-          </button>
         </div>
 
         <div class="sm:hidden flex items-center gap-4">
@@ -141,15 +136,385 @@
       </div>
 
       <main class="">
-        <div class="mt-10 flex md:ml-20 gap-3">
+        <div class="mt-10 flex flex-col md:ml-20 gap-6" style="margin-left: 8%">
           <p class="">.../</p>
+          <h1 class="text-xl sm:text-2xl font-bold">Donate</h1>
         </div>
         <section class="py-17 flex flex-col items-center justify-center">
           <div class="container mx-auto px-4">
             <div class="text-left mb-12">
               <div class="mt-10">
-                <div class="md:w-1/2 font-roboto">
-                  <h3 class="text-2xl font-semibold mb-4">Donate</h3>
+                <div
+                  class="lg:w-11/12 sm:w-full gap-9 sm:flex lg:flex justify-between font-roboto"
+                >
+                  <div class="donation-container lg:w-1/2 sm:w-full">
+                    <form id="donation-form">
+                      <div class="frequency flex flex-col gap-4 font-roboto">
+                        <div>
+                          <h1 class="text-xl sm:text-2xl font-bold text-white">
+                            Frequency
+                          </h1>
+                        </div>
+                        <div class="radio-group flex gap-6">
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input
+                              type="radio"
+                              name="frequency"
+                              value="one-time"
+                              checked
+                            />
+                            One-Time</label
+                          >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input
+                              type="radio"
+                              name="frequency"
+                              value="monthly"
+                            />
+                            Monthly</label
+                          >
+                        </div>
+                      </div>
+                      <div class="amount flex flex-col gap-4 font-roboto">
+                        <h1 class="text-xl sm:text-2xl font-bold text-white">
+                          Amount
+                        </h1>
+                        <div
+                          class="radio-group flex gap-5 flex-wrap md:w-1/2 sm:w1/2 lg:1/4"
+                        >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input
+                              type="radio"
+                              name="amount"
+                              value="10"
+                              checked
+                            />
+                            $10</label
+                          >
+
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input type="radio" name="amount" value="50" />
+                            $50</label
+                          >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input type="radio" name="amount" value="100" />
+                            $100</label
+                          >
+
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input type="radio" name="amount" value="500" />
+                            $500</label
+                          >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input type="radio" name="amount" value="1000" />
+                            $1000</label
+                          >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input type="radio" name="amount" value="5000" />
+                            $5000</label
+                          >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input type="radio" name="amount" value="custom" />
+                            Other</label
+                          >
+                        </div>
+                        <div
+                          class="amount_input lg:w-1/3 sm:w-1/6 md:w-1/3 xl:w-1/3"
+                        >
+                          <input
+                            type="number"
+                            id="custom-amount"
+                            name="custom-amount"
+                            placeholder="Enter custom amount"
+                            style="display: none"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="payment_method flex flex-col gap-4 font-roboto"
+                      >
+                        <h1 class="text-xl sm:text-2xl font-bold text-white">
+                          Payment Method
+                        </h1>
+                        <div class="radio-group flex gap-6">
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input
+                              type="radio"
+                              name="payment-method"
+                              value="paypal"
+                              checked
+                            />
+                            PayPal</label
+                          >
+                          <label
+                            class="text-sm sm:text-sm font-light text-white"
+                            ><input
+                              type="radio"
+                              name="payment-method"
+                              value="card"
+                            />
+                            Credit Card</label
+                          >
+                        </div>
+                      </div>
+                      <div id="paypal-button-container"></div>
+                      <div
+                        id="credit-card-form-container"
+                        style="display: none; background-color: #ffffff"
+                      >
+                        <div
+                          id="credit-card-element"
+                          style="background-color: #ffffff"
+                        ></div>
+                        <button id="submit-button" type="submit">
+                          Submit Payment
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="lg:w-1/2 sm:w-full mt-10 lg:mt-0 md:mt-0 xl:mt-0 sm:mt-0"
+                  >
+                    <div class="flex flex-col gap-4 font-roboto">
+                      <div class="description flex flex-col gap-4 font-robot">
+                        <div>
+                          <h1 class="text-sm sm:text-sm font-normal">Crypto</h1>
+                        </div>
+                        <div>
+                          <p class="text-sm sm:text-sm font-light">
+                            For crypto payments
+                          </p>
+                          <p class="text-sm sm:text-sm font-light">
+                            Give crypto directly to people in poverty
+                          </p>
+                        </div>
+                        <div>
+                          <p class="text-sm sm:text-sm font-light">
+                            GiveDirectly delivers donations directly to people
+                            living in extreme poverty across Africa through mobile
+                            money.Here's how it works.
+                          </p>
+                        </div>
+                        <div>
+                          <p class="text-sm sm:text-sm font-light">
+                            GiveDirectly's official crypto addresses Want to give
+                            other currencies? Reach out and we'll send back an
+                            address - info@givedirectly.org.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="crypo-container flex gap-1 flex-wrap">
+                        <div class="crypto flex-wrap flex flex-col">
+                          <div class="mt-2 w-90">
+                            <p class="text-sm sm:text-sm font-normal">BTC</p>
+                            <p class="text-sm sm:text-sm font-light w-1/2"
+                              >34kwsubU6ExhXJdTfdNN1CHYyPvfHajFnX</p
+                            >
+                          </div>
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">ETH</p>
+                            <p class="text-sm sm:text-sm font-light w-1/2"
+                              >0x750EF1D7a0b4Ab1c97B7A623D7917CcEb5ea779C</p
+                            >
+                          </div>
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">CELO</p>
+                            <p class="text-sm sm:text-sm font-light w-1/2"
+                              >0x48c16863212D15813E95BA39c843c965f6C08187</p
+                            >
+                          </div>
+                          <div class="mt-2 ">
+                            <p class="text-sm sm:text-sm font-normal">DOGE</p>
+                            <p class="text-xs sm:text-sm font-light  w-1/2"
+                              >D8QytyE1U7C6BWUcLjCZEBNVCDu6AUqD5V XRP
+                              rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg (XRP tag:
+                              3896575436)</p
+                            >
+                          </div>
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">
+                              ADA/Cardano
+                            </p>
+                            <p class="text-sm sm:text-sm font-light w-1/2">
+                              addr1vy6dg4gfentf0qdaysgwas0kxunspmj9u6wgve92j72ua0skkg8m9
+                            </p>
+                          </div>
+                        </div>
+                        <div class="bank-info">
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">Check</p>
+                            <ul class="flex flex-col gap-2">
+                              <li>
+                                <p class="text-sm sm:text-sm font-light">
+                                  Make your check payable to:
+                                </p>
+                              </li>
+                              <li>
+                                <p class="text-sm sm:text-sm font-light">
+                                  Pay It Forward ClubPO Box 3221New York, NY 10008
+                                </p>
+                              </li>
+                              <li>
+                                <p class="text-sm sm:text-sm font-light">
+                                  Please send via USPS. Checks sent via FedEx or UPS
+                                  will be returned to sender.
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+  
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">
+                              Stock Transfer
+                            </p>
+                            <ul class="flex flex-col gap-2">
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light"></p>
+                                  Account name
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  GiveDirectly, Inc.
+                                </p>
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Account number
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  220-66222
+                                </p>
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Depository Trust Company (DTC) number
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  0352
+                                </p>
+  
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Bank Name
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">Chase</p>
+  
+                              </li>
+  
+                            </ul>
+                          </div>
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">
+                              Wire Transfer
+                            </p>
+                            <ul class="flex flex-col gap-2">
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light"></p>
+                                  Account name
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  GiveDirectly, Inc.
+                                </p>
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Account type
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  Checking
+                                </p>
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Account number
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  120191050
+                                </p>
+  
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Routing number
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">021000021</p>
+  
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Bank name
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">Chase Manhattan Bank</p>
+  
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Bank address
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">919 3rd Ave, New York, NY, 10022, USA</p>
+  
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Our address
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">33 Irving Pl., New York, NY 10003, USA</p>
+  
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="mt-2">
+                            <p class="text-sm sm:text-sm font-normal">
+                              From an international bank account:
+                            </p>
+                            <ul class="flex flex-col gap-2">
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Account number
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  120191050
+                                </p>
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Swift number
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  CHASUS33
+                                </p>
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  Account title
+                                </p>
+                                <p class="text-sm sm:text-sm font-light">
+                                  GiveDirectly, Inc.
+                                </p>
+  
+                              </li>
+                              <li class="text-sm sm:text-sm font-light">
+                                <p class="text-sm sm:text-sm font-light">
+                                  We do not have an IBAN number, but our bank has assured us that you can send funds to our account using the above information.
+                                </p>
+                              </li>
+  
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -161,7 +526,7 @@
           <div class="container mx-auto px-4">
             <div>
               <div>
-                <h3 class="text-2xl font-medium font-roboto mb-4">
+                <h3 class="text-2xl font-normal font-roboto mb-4">
                   Contact Us
                 </h3>
               </div>
@@ -206,4 +571,11 @@
     </div>
   </body>
   <script src="../scripts/app.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script
+    src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
+    charset="UTF-8"
+  ></script>
+
+  <script src="../scripts/payment.js"></script>
 </html>

@@ -4,12 +4,14 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: Roboto;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1;
+
 }
 
 main {
@@ -28,4 +30,45 @@ main {
 }
 .spacer {
   width: 100% !important;
+}
+
+
+.donation-container {
+  background-color: #0038FF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+} */
+
+.radio-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none; /* Initially hide the custom amount input */
+}
+
+#paypal-button-container, #credit-card-button-container {
+  margin-top: 20px;
+  display: none; /* Initially hide both containers */
 }
